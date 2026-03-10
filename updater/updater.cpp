@@ -361,14 +361,12 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
     std::string fullUpdatePathStr = baseUpdatePathStr + tokenResponse;
     std::wstring fullUpdatePath = ToWide(fullUpdatePathStr);
 
-    // Download ASI (default)
     if (!HttpDownloadToFile(host, fullUpdatePath, asiDest))
     {
         MessageBoxA(nullptr, xorstr_("Failed to download WRAITH-AC.asi"), xorstr_("Wraith-AC"), MB_ICONERROR | MB_OK);
         return 4;
     }
 
-    // Download DLL with file parameter
     std::string dllUpdatePath = fullUpdatePathStr + xorstr_("&file=dll");
     std::wstring wDllUpdatePath = ToWide(dllUpdatePath);
 
