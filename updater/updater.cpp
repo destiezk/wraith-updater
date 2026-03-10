@@ -327,7 +327,7 @@ int WINAPI WinMain(HINSTANCE, HINSTANCE, LPSTR, int)
     const std::string asiDest = gtaDir + asiFileName;
     const std::string dllDest = gtaDir + dllFileName;
 
-    const std::string hostStr = xorstr_("anticheat.fsc-clan.eu");
+    const std::string hostStr = xorstr_("anticheat.your-domain.com");
     const std::string tokenPathStr = xorstr_("/get_token.php");
     const std::string baseUpdatePathStr = xorstr_("/wraith_update.php?token=");
 
